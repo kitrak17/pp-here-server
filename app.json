@@ -1,0 +1,49 @@
+{
+  "name": "paypal-retail-sdk-service",
+  "description": "A service to manage your client id and secret to issue access tokens to your applications that integrate the PayPal Retail SDK",
+  "keywords": [
+    "small",
+    "sharp",
+    "tool"
+  ],
+  "repository": "https://github.com/djMax/paypal-retail-node.git",
+  "env": {
+    "SETUP_ENABLED": {
+      "description": "True to allow tokens to be generated and displayed back to the browser. You should turn this off before going 'live'.",
+      "value": "true"
+    },
+    "APP_SECURE_IDENTIFIER": {
+      "description": "A random value used to provide additional control to disable compromised versions of your app. If you run multiple load balanced dynos, this must be the same for all",
+      "required": true,
+      "generator": "secret"
+    },
+    "PAYPAL_LIVE_CLIENTID": {
+      "description": "The application client id for the LIVE PayPal Environment",
+      "required": false
+    },
+    "PAYPAL_LIVE_SECRET": {
+      "description": "The application secret for the LIVE PayPal Environment",
+      "required": false
+    },
+    "PAYPAL_SANDBOX_CLIENTID": {
+      "description": "The application client id for the SANDBOX PayPal Environment",
+      "required": false
+    },
+    "PAYPAL_SANDBOX_SECRET": {
+      "description": "The application secret for the SANDBOX PayPal Environment",
+      "required": false
+    },
+    "ROOT_URL": {
+      "description": "The base URL by which this server can be reached on the Internet. If not set, we will fetch from the request URL. If you use a custom domain for your server, you'll likely want to put that URL here.",
+      "required": false
+    },
+    "APP_REDIRECT_URL": {
+      "description": "After authentication is done, you will want this service to redirect to your app, usually with a custom URL protocol. The query argument 'sdk_token' will be appended.",
+      "required": false
+    },
+    "PAYPAL_CUSTOM_ENVIRONMENT": {
+      "description": "If you're using other PayPal environments besides sandbox and live, enter the value you receive from a PayPal representative here.",
+      "required": false
+    }
+  }
+}
