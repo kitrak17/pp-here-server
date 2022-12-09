@@ -27,7 +27,7 @@
   "homepage": "https://github.com/djMax/paypal-retail-node",
   "dependencies": {
     "dotenv": "^5.0.1",
-    "express": "^4.12.3",
+    "express": "^4.17.3",
     "npm": "^5.8.0",
     "wreck": "^5.4.0"
   },
